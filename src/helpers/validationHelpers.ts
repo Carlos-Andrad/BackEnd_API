@@ -3,10 +3,14 @@ export const isValidEmail = (email: string): boolean => {
   return emailRegex.test(email);
 };
 
-export const isValidPrice = (price: number): boolean => {
-  return price > 0;
+/**
+ * Valida se o número de telefone é uma string contendo apenas dígitos.
+ */
+export const isValidTelefone = (telefone: string): boolean => {
+  // Verifica se a string contém apenas números
+  return /^\d+$/.test(telefone);
 };
 
-export const isValidTitle = (title: string): boolean => {
-  return title.length >= 3;
+export const isValidNome = (nome: string): boolean => {
+  return nome.length >= 3;
 };

@@ -1,20 +1,20 @@
 import express from 'express';
-import { getAllBooks, addBook } from '../controllers/bookControllers';
+import { getAllContatos, addContato } from '../controllers/ContactControllers';
 
 const router = express.Router();
 
 /**
- * Rota para listar todos os livros.
+ * Rota para listar todos os contatos.
  * Método: GET
- * Endpoint: /books
+ * Endpoint: /contatos
  */
-router.get('/', getAllBooks);
+router.get('/', getAllContatos);
 
 /**
- * Rota para adicionar um novo livro.
+ * Rota para adicionar um novo contato.
  * Método: POST
- * Endpoint: /books
+ * Endpoint: /contatos
  */
-router.post('/', addBook);
+router.post('/', addContato);
 
 export default router;  
