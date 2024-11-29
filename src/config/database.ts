@@ -2,9 +2,9 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-  host: 'aws-0-us-west-1.pooler.supabase.com', // 
-  user: 'postgres.yuifmpwitqkgtxkyeuvc',
-  password: '960550076Wag$',
+  host: 'postgresql://postgres.pvagqcbkdpysuwnzxwwi:[YOUR-PASSWORD]@aws-0-sa-east-1.pooler.supabase.com:6543/postgres', // 
+  user: 'postgres.pvagqcbkdpysuwnzxwwi',
+  password: 'Cadu97754?@',
   database: 'postgres',
   port: 6543, // geralmente é 5432 para PostgreSQL
 });
