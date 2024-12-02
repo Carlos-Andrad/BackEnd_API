@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express'; 
-import { ContatoRepository } from '../repositories/contatoRepository'; // Importa a classe responsável pelo gerenciamento de contatos no repositório
+import { ContactRepository } from '../repositories/ContactRepository'; // Importa a classe responsável pelo gerenciamento de contatos no repositório
 
 // Cria uma instância do repositório de contatos para interação com os dados
-const contatosRepository = new ContatoRepository();
+const contactRepository = new ContactRepository();
 
 /**
  * Middleware para validação dos dados de entrada de um contato.
@@ -49,7 +49,7 @@ const validateContatoData = (req: Request, res: Response, next: NextFunction) =>
  */
 export const getAllContatos = async (req: Request, res: Response) => {
   try {
-    const contatos = await contatosRepository.getAllContatos(); // Busca os contatos no repositório
+    const contatos = await contactRepository.getAllContatos(); // Busca os contatos no repositório
     res.status(200).json(contatos); // Retorna a lista de contatos com status 200 (OK)
   } catch (error) {
     console.error('Erro ao buscar contatos:', error); // Loga o erro para depuração
@@ -65,7 +65,7 @@ export const addContato = async (req: Request, res: Response) => {
   const { name, telefone, image, email } = req.body; // Extrai os dados do corpo da requisição
 
   try {
-    const contato = await contatosRepository.addContato(name, telefone, image, email); // Adiciona o contato ao repositório
+    const contato = await contactRepository.addContato(name, telefone, image, email); // Adiciona o contato ao repositório
     res.status(201).json(contato); // Retorna o contato criado com status 201 (Criado)
   } catch (error) {
     console.error('Erro ao adicionar o contato:', error); // Loga o erro para depuração

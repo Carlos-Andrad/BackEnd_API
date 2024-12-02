@@ -2,7 +2,7 @@ import { Pool } from 'pg';
 import pool from '../config/database';
 import { Contato } from '../models/contatoModel';
 
-export class ContatoRepository {
+export class ContactRepository {
   private pool: Pool = pool;
 
   /**

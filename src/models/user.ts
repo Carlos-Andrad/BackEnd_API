@@ -9,7 +9,7 @@ interface User {
 
   const users: User[] = []; // Simulação de banco de dados em memória
 
-  export const UserModel = {
+  export const userModel = {
     findOne: (email: string) => users.find(user => user.email === email),
     save: (user: User) => {
       users.push(user);
