@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags para especificar a codificação de caracteres e configurar a responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Título da página -->
+    <title>Live 02</title>
+
+    <!-- Script externo JavaScript para funcionalidades, com defer para carregar após o HTML -->
+    <script src="js/crud.js" defer type="module"></script>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        Sistema de Gerenciamento de Contatos
+    </header>
+
+    <!-- Seção principal com formulário para cadastro de contatos -->
+    <div id="principal">
+        <!-- Título da seção -->
+        <h1>Cadastro de Contatos</h1>
+        <!-- Formulário com campos para adicionar um contato -->
+        <form id="form">
+            <!-- Campo para o nome -->
+            <label>Nome</label> 
+            <input type="text" name="txt_nome" id="nome" ><br>
+
+            <!-- Campo para o telefone -->
+            <label>Telefone</label> 
+            <textarea type="text" name="txt_telefone" id="telefone"></textarea><br>
+
+            <!-- Campo para a URL da imagem -->
+            <label>Imagem</label> 
+            <input type="text" name="txt_image" id="image" ><br>
+
+            <!-- Campo para o email -->
+            <label>Email</label> 
+            <input type="text" name="txt_email" id="email" ><br>
+
+            <!-- Botão para salvar os dados -->
+            <div id="salvar"> Salvar </div>
+        </form>
+    </div>
+
+    <!-- Seção para exibição da lista de contatos -->
+    <div id="listContatos">
+        <!-- Título da lista -->
+        <h1> Lista de Contatos </h1>
+
+        <!-- Cabeçalho da tabela com os títulos das colunas -->
+        <div class="linha">
+            <div class="titulo">Nome</div>
+            <div class="titulo">Telefone</div>
+            <div class="titulo">Email</div>
+            <div class="titulo">Opções</div>
+        </div>
+
+        <!-- Container onde os contatos cadastrados serão exibidos dinamicamente -->
+        <div id="listDados">
+        </div>
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <span>FONZ - Fazendo O que Ninguém Faz!</span>
+    </footer>
+</body>
+</html>

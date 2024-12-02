@@ -2,12 +2,12 @@
 
 import bcrypt from 'bcrypt';
 import { v4 as uuidv4 } from 'uuid'; // Para gerar IDs únicos
-import { UserModel } from '../models/user'; // Importando o modelo de usuário
+import { userModel } from '../models/User'; // Importando o modelo de usuário
 
 export class AuthService {
   // Método para registrar um novo usuário
   async registerUser(name: string, email: string, password: string) {
-    const existingUser = UserModel.findOne(email);
+    const existingUser = userModel.findOne(email);
     if (existingUser) {
       throw new Error('Email já está em uso');
     }
@@ -20,13 +20,13 @@ export class AuthService {
       password: hashedPassword,
     };
 
-    UserModel.save(user);
+    userModel.save(user);
     return { id: user.id, name: user.name, email: user.email }; // Retorna informações do usuário sem a senha
   }
 
   // Método para fazer login de um usuário
   async loginUser(email: string, password: string) {
-    const user = UserModel.findOne(email);
+    const user = userModel.findOne(email);
     if (!user) {
       throw new Error('Usuário não encontrado');
     }
