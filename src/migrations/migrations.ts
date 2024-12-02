@@ -21,6 +21,8 @@ const createUsersTable = async () => {
   }
 };
 
+createUsersTable().then(() => process.exit(0));
+
 const createContatosTable = async () => {
   const contato = await pool.connect();
   try {
