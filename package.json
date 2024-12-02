@@ -1,5 +1,5 @@
 {
-  "name": "bookstore",
+  "name": "Contatos",
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node src/server.ts",
