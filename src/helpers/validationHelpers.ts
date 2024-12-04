@@ -11,6 +11,6 @@ export const isValidTelefone = (telefone: string): boolean => {
   return /^\d+$/.test(telefone);
 };
 
-export const isValidNome = (nome: string): boolean => {
-  return nome.length >= 3;
+export const isValidNoame = (name: string): boolean => {
+  return name.length >= 3;
 };

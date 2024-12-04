@@ -14,7 +14,7 @@ const createUsersTable = async () => {
     `;
     await client.query(queryText);
     console.log('Tabela "users" criada com sucesso!');
-  } catch (err) {
+  } catch (err:any) {
     console.error('Erro ao criar tabela:', err);
   } finally {
     client.release();
@@ -37,7 +37,7 @@ const createContatosTable = async () => {
     `;
     await contato.query(queryText);
     console.log('Tabela "contatos" criada com sucesso!');
-  } catch (err) {
+  } catch (err:any) {
     console.error('Erro ao criar tabela:', err);
   } finally {
     contato.release();
