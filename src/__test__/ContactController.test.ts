@@ -2,7 +2,7 @@ import request from 'supertest';
 import { app } from '../server';
 
 describe('Contact Controller', () => {
-  
+
   it('should return all contacts', async () =>{
     const response = await        
     request(app).get('/contatos');
@@ -10,7 +10,7 @@ describe('Contact Controller', () => {
     expect(response.status).toBe(200);
     expect(Array.isArray(response.body)).toBe(true);
   });
-  
+
   it('should add a new contact', async () => {
         const newContact = {
           name: 'Test Contact',
